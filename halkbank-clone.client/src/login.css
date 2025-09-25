@@ -1,0 +1,151 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+:root {
+  --halkbank-blue: #004791;
+  --halkbank-blue-light: #0071bc;
+  --error-red: #d32f2f;
+  --background-gradient-start: #e6f0f9;
+  --background-gradient-end: #c2d7f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  margin: 0; padding: 0; height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
+  color: #1a1a1a;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-form {
+  background: white;
+  padding: 48px 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 71, 145, 0.15);
+  max-width: 420px;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.login-form:hover {
+  box-shadow: 0 30px 70px rgba(0, 71, 145, 0.25);
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.halkbank-logo {
+  height: 72px;
+  width: auto;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.1));
+}
+
+.form-title {
+  font-weight: 800;
+  font-size: 2.75rem;
+  text-align: center;
+  margin-bottom: 36px;
+  color: var(--halkbank-blue);
+}
+
+.error-message {
+  background-color: #fdecea;
+  color: var(--error-red);
+  border: 1px solid #f9c4c1;
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(211, 47, 47, 0.2);
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.form-group {
+  margin-bottom: 28px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #3b3b3b;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1.1rem;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--halkbank-blue);
+  box-shadow: 0 0 10px rgba(0, 71, 145, 0.3);
+}
+
+.submit-button {
+  width: 100%;
+  background: linear-gradient(90deg, var(--halkbank-blue), var(--halkbank-blue-light));
+  border: none;
+  padding: 18px;
+  border-radius: 14px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 71, 145, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #003366, #0055a3);
+  box-shadow: 0 10px 35px rgba(0, 51, 102, 0.4);
+}
+
+.submit-button:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

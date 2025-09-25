@@ -1,0 +1,89 @@
+﻿/* src/index.css */
+
+/* Poppins fontunu Google Fonts'tan içe aktar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+/* CSS Değişkenleri (Global olarak tanımlandı) */
+:root {
+    --halkbank-blue: #004791;
+    --halkbank-blue-light: #0066cc; /* Önceki CSS'inizdeki #0066cc ile uyumlu hale getirildi */
+    --error-red: #d32f2f; /* Önceki CSS'inizdeki #991b1b'den daha genel bir kırmızı */
+    --background-gradient-start: #e0f2f7;
+    --background-gradient-end: #c5d9ed;
+    --text-primary: #1a1a1a;
+    --text-secondary: #3b3b3b;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 71, 145, 0.15);
+}
+
+/* HTML, Body ve #root elementlerinin tam yüksekliği kaplaması için temel stiller */
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* Genel arka plan, login-container ve home-page-container tarafından geçersiz kılınacak */
+    background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif; /* Global font */
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box; /* Padding ve border'ın genişliği etkilememesi için */
+    overflow-x: hidden; /* Yatay kaydırmayı engelle */
+}
+
+/* Eğer genel bir body arka planı isterseniz, bu satırı kullanabilirsiniz.
+   Ancak login-container ve home-page-container kendi arka planlarını tanımladığı için
+   buradaki background-color genellikle görünmez. */
+/* body {
+    background-color: #f3f4f6;
+} */
+
+/* Genel link stilleri */
+a {
+    font-weight: 500;
+    color: var(--halkbank-blue-light);
+    text-decoration: inherit;
+}
+a:hover {
+    color: var(--halkbank-blue);
+}
+
+/* Genel buton stilleri (spesifik butonlar kendi stillerini geçersiz kılacak) */
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.25s, background-color 0.25s;
+}
+button:hover {
+    border-color: var(--halkbank-blue);
+}
+button:focus,
+button:focus-visible {
+    outline: 4px auto var(--halkbank-blue-light);
+}
+
+/* Medya sorgusu (açık renk şeması için - eğer kullanılıyorsa) */
+@media (prefers-color-scheme: light) {
+    :root {
+        /* color: #213547; */
+        /* background-color: #ffffff; */
+    }
+    a:hover {
+        color: var(--halkbank-blue);
+    }
+    button {
+        background-color: #f9f9f9;
+        color: #1a1a1a;
+    }
+}

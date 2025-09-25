@@ -1,0 +1,15 @@
+﻿#root {
+    /* max-width: 1280px; */ /* İsteğe bağlı olarak kaldırılabilir veya korunabilir */
+    /* margin: 0 auto; */ /* Kaldırıldı - Login bileşeninin kendi ortalaması için */
+    /* padding: 2rem; */ /* İsteğe bağlı olarak kaldırılabilir veya korunabilir */
+    /* text-align: center; */ /* Kaldırıldı - Login bileşeninin kendi ortalaması için */
+    /* Not: Eğer App.jsx'te Login bileşeni doğrudan #root içine render ediliyorsa,
+       ve Login bileşeni min-h-screen ve flexbox ile kendini ortalıyorsa,
+       #root'taki bu ortalama stillerini kaldırmak en doğrusudur.
+       Böylece Login bileşeni tüm viewport'ı kaplayabilir. */
+}
+
+th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

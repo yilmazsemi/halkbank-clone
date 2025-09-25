@@ -1,0 +1,449 @@
+﻿/* src/PaymentForm.css */
+
+/* Main container for the payment form page */
+.payment-page-container {
+    min-height: 100vh; /* Full viewport height */
+    background: linear-gradient(to bottom right, #e0f2f7, #c5d9ed); /* Light blue/indigo gradient background */
+    padding: 1rem; /* Padding for small screens */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+@media (max-width: 640px) {
+    .payment-page-container {
+        padding: 1rem 0.5rem;
+    }
+}
+
+/* Max width container for content */
+.max-width-container {
+    max-width: 72rem; /* Equivalent to max-w-6xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header section styling */
+.header-section {
+    background-color: #ffffff; /* White background */
+    border-radius: 1rem; /* Rounded-2xl */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-xl */
+    overflow: hidden;
+    margin-bottom: 2rem; /* mb-8 */
+}
+
+.header-content {
+    background: linear-gradient(to right, #004791, #0066cc); /* Halkbank primary blue gradient */
+    color: #ffffff; /* White text */
+    padding: 2rem; /* p-8 */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* gap-3 */
+}
+
+.header-icon {
+    height: 2.5rem; /* h-10 */
+    width: 2.5rem; /* w-10 */
+}
+
+.header-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+}
+
+.header-subtitle {
+    color: rgba(255, 255, 255, 0.8); /* text-blue-100 */
+    margin-top: 0.25rem; /* mt-1 */
+}
+
+/* Alert message styling */
+.alert-message {
+    margin-bottom: 1.5rem; /* mb-6 */
+    padding: 1rem; /* p-4 */
+    border-radius: 0.5rem; /* rounded-lg */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* gap-3 */
+}
+
+.alert-icon {
+    height: 1.25rem; /* h-5 */
+    width: 1.25rem; /* w-5 */
+    flex-shrink: 0;
+}
+
+.alert-success {
+    background-color: #e6ffee; /* bg-green-50 */
+    color: #166534; /* text-green-800 */
+    border: 1px solid #bbf7d0; /* border-green-200 */
+}
+
+.alert-error {
+    background-color: #fee6e6; /* bg-red-50 */
+    color: #991b1b; /* text-red-800 */
+    border: 1px solid #fca5a5; /* border-red-200 */
+}
+
+/* Grid layout for sections */
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: 2rem; /* gap-8 */
+}
+
+@media (min-width: 1024px) { /* lg:grid-cols-2 */
+    .section-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Individual section styling (Accounts, Transfer Form, Transfer History) */
+.section-card {
+    background-color: #ffffff; /* White background */
+    border-radius: 1rem; /* rounded-2xl */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-xl */
+    padding: 2rem; /* p-8 */
+}
+
+.section-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: #333; /* text-gray-800 */
+    margin-bottom: 1.5rem; /* mb-6 */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* gap-2 */
+}
+
+.section-title-icon {
+    height: 1.5rem; /* h-6 */
+    width: 1.5rem; /* w-6 */
+}
+
+/* Accounts list styling */
+.accounts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* space-y-4 */
+}
+
+.account-item {
+    background: linear-gradient(to right, #f9fafb, #f3f4f6); /* from-gray-50 to-gray-100 */
+    border-radius: 0.75rem; /* rounded-xl */
+    padding: 1.5rem; /* p-6 */
+    border-left: 4px solid #3b82f6; /* border-l-4 border-blue-500 */
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+    .account-item:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* hover:shadow-md */
+    }
+
+.account-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.account-info h3 {
+    font-weight: 600; /* font-semibold */
+    color: #333; /* text-gray-800 */
+    font-size: 1.125rem; /* text-lg */
+}
+
+.account-info p {
+    color: #4b5563; /* text-gray-600 */
+    font-size: 0.875rem; /* text-sm */
+    margin-top: 0.25rem; /* mt-1 */
+}
+
+.account-info .account-type {
+    color: #6b7280; /* text-gray-500 */
+    font-size: 0.75rem; /* text-xs */
+}
+
+.account-balance {
+    text-align: right;
+}
+
+    .account-balance p {
+        font-size: 1.5rem; /* text-2xl */
+        font-weight: 700; /* font-bold */
+        color: #16a34a; /* text-green-600 */
+    }
+
+/* Transfer form styling */
+.transfer-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* space-y-6 */
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: 1rem; /* gap-4 */
+}
+
+@media (min-width: 768px) { /* md:grid-cols-2 */
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.form-field label {
+    display: block;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    color: #4b5563; /* text-gray-700 */
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.form-select,
+.form-input-text {
+    width: 100%;
+    padding: 0.75rem 1rem; /* px-4 py-3 */
+    border: 1px solid #d1d5db; /* border border-gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .form-select:focus,
+    .form-input-text:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+        border-color: #3b82f6; /* focus:border-blue-500 */
+        box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); /* focus:ring */
+    }
+
+/* Amount input with icon */
+.amount-input-wrapper {
+    position: relative;
+}
+
+.amount-input-icon {
+    position: absolute;
+    left: 0.75rem; /* left-3 */
+    top: 0.75rem; /* top-3 */
+    height: 1.25rem; /* h-5 */
+    width: 1.25rem; /* w-5 */
+    color: #9ca3af; /* text-gray-400 */
+    pointer-events: none; /* Icon tıklanabilir olmasın */
+}
+
+.amount-input {
+    padding-left: 2.5rem; /* pl-10 */
+}
+
+/* Submit button */
+.submit-transfer-button {
+    width: 100%;
+    background: linear-gradient(to right, #004791, #0066cc); /* Halkbank primary blue gradient */
+    color: #ffffff; /* White text */
+    padding: 1rem 1.5rem; /* py-4 px-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    font-weight: 600; /* font-semibold */
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* gap-2 */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow */
+}
+
+    .submit-transfer-button:hover {
+        background: linear-gradient(to right, #003a74, #0052a3); /* Darker gradient on hover */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+    }
+
+    .submit-transfer-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(0, 71, 145, 0.5), 0 0 0 4px rgba(0, 102, 204, 0.3); /* Focus ring with Halkbank colors */
+    }
+
+    .submit-transfer-button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        box-shadow: none;
+        background: #a0aec0; /* Daha açık gri arka plan */
+        color: #718096; /* Daha uyumlu yazı rengi */
+    }
+
+/* Loading spinner */
+.loading-spinner {
+    animation: spin 1s linear infinite;
+    border-radius: 50%;
+    height: 1.25rem; /* h-5 */
+    width: 1.25rem; /* w-5 */
+    border-bottom: 2px solid #ffffff; /* border-b-2 border-white */
+}
+
+.loading-spinner-large {
+    animation: spin 1s linear infinite;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #004791; /* Halkbank mavisi */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.transfer-history-section {
+    max-height: 400px; /* Veya sizin belirlediğiniz yeni yükseklik */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    margin-top: 2rem; /* YENİ EKLENEN KISIM: Yukarıdan boşluk bırakır */
+    /* Bu değeri ihtiyacınıza göre ayarlayabilirsiniz, örneğin:
+       margin-top: 30px;  (piksel olarak)
+       margin-top: 1.5rem; (daha az boşluk için)
+       margin-top: 3rem;   (daha fazla boşluk için)
+    */
+}
+
+.transfer-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* space-y-4 */
+}
+
+.no-transfers-message {
+    text-align: center;
+    padding-top: 2rem; /* py-8 */
+    color: #6b7280; /* text-gray-500 */
+}
+
+.no-transfers-icon {
+    height: 3rem; /* h-12 */
+    width: 3rem; /* w-12 */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem; /* mb-4 */
+    color: #d1d5db; /* text-gray-300 */
+}
+
+.transfer-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem; /* p-4 */
+    background-color: #f9fafb; /* bg-gray-50 */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: background-color 0.2s ease-in-out;
+}
+
+    .transfer-item:hover {
+        background-color: #f3f4f6; /* hover:bg-gray-100 */
+    }
+
+.transfer-details {
+    flex: 1; /* flex-1 */
+}
+
+.transfer-accounts {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* gap-2 */
+    margin-bottom: 0.25rem; /* mb-1 */
+}
+
+    .transfer-accounts span {
+        font-weight: 600; /* font-semibold */
+        color: #333; /* text-gray-800 */
+    }
+
+.transfer-icon-separator {
+    height: 1rem; /* h-4 */
+    width: 1rem; /* w-4 */
+    color: #9ca3af; /* text-gray-400 */
+}
+
+.transfer-date {
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* text-gray-600 */
+}
+
+.transfer-description {
+    font-size: 0.875rem; /* text-sm */
+    color: #6b7280; /* text-gray-500 */
+    margin-top: 0.25rem; /* mt-1 */
+}
+
+.transfer-amount-status {
+    text-align: right;
+}
+
+.transfer-amount {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+    color: #dc2626; /* text-red-600 */
+}
+
+    /* Eğer pozitif ve negatif renk farklılığı isterseniz, React tarafında 
+transfer-amount'a positive ya da negative class'ı ekleyebilirsiniz: */
+    .transfer-amount.positive {
+        color: #16a34a; /* yeşil */
+    }
+
+    .transfer-amount.negative {
+        color: #dc2626; /* kırmızı */
+    }
+
+.transfer-status {
+    font-size: 0.875rem; /* text-sm */
+    color: #16a34a; /* text-green-600 */
+    font-weight: 500; /* font-medium */
+}
+
+/* Geri Butonu Stilleri (Önceden verilen ve son istenen hali) */
+.back-button-container {
+    margin-top: 16px; /* Butonun üst boşluğu */
+    margin-bottom: 24px; /* Butonun alt boşluğu */
+    text-align: left; /* Butonu sola hizala */
+}
+
+.back-button {
+    background-color: #ffffff; /* Beyaz arka plan */
+    color: #004D99; /* Koyu Halkbank mavisi metin rengi */
+    border: 2px solid #004D99; /* Halkbank mavisi kenarlık */
+    padding: 8px 16px; /* İç boşluk */
+    border-radius: 8px; /* Köşeleri yuvarla */
+    font-weight: 600; /* Kalın yazı tipi */
+    font-size: 14px; /* Küçük yazı boyutu */
+    cursor: pointer; /* Fare imleci */
+    transition: all 0.2s ease-in-out; /* Yumuşak geçişler */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    display: flex; /* İkon ve metni yan yana hizalamak için */
+    align-items: center; /* Dikeyde ortalama */
+    gap: 6px; /* İkon ile metin arasına boşluk */
+}
+
+    .back-button:hover {
+        background-color: #e6f0ff; /* Üzerine gelindiğinde açık mavi */
+        color: #003366; /* Hover olduğunda daha koyu mavi metin */
+        border-color: #003366; /* Hover olduğunda daha koyu mavi kenarlık */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Hafifçe daha belirgin gölge */
+    }
+
+    .back-button:active {
+        background-color: #d9e6f9; /* Tıklandığında daha koyu açık mavi */
+        border-color: #002244;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* İçeri doğru gölge */
+    }
+
+    /* Lucide ikonları için ekstra stil (isteğe bağlı) */
+    .back-button svg {
+        /* İkonun butondaki pozisyonunu ayarlamak için gerekirse buraya stil eklenebilir */
+    }

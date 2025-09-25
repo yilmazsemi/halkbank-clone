@@ -1,0 +1,491 @@
+﻿/* src/ProfilePage.css */
+
+/* CSS Custom Properties (Variables) for consistent theming */
+:root {
+    --halkbank-blue: #004b8d;
+    --halkbank-blue-light: #357abd;
+    --error-red: #e74c3c;
+    --success-green: #27ae60;
+    --background-gradient-start: #e0f0ff;
+    --background-gradient-end: #a0c8ff;
+    --text-primary: #222;
+    --text-secondary: #666;
+    --border-color: #e0e0e0;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Main page container for the profile page */
+.profile-page-container {
+    min-height: 100vh; /* Ensures the container takes at least the full viewport height */
+    background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end)); /* Gradient background */
+    font-family: 'Poppins', sans-serif; /* Font family */
+    color: var(--text-primary); /* Primary text color */
+}
+
+/* Profile Header styling */
+.profile-header {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space items horizontally */
+    padding: 20px 30px; /* Padding */
+    background-color: var(--halkbank-blue); /* Halkbank blue background */
+    color: white; /* White text */
+    box-shadow: var(--card-shadow); /* Card shadow */
+}
+
+    /* --- Profil Sayfasına Özel Geri Butonu Stilleri --- */
+    /* Bu stil, sadece .profile-header içinde bulunan .back-button'ı etkileyecektir. */
+    .profile-header .back-button {
+        display: flex; /* Flexbox layout */
+        align-items: center; /* Vertically center items */
+        gap: 8px; /* Gap between icon and text */
+        background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background for profile page */
+        border: none; /* No border */
+        color: white; /* White text color */
+        padding: 10px 16px; /* Padding */
+        border-radius: 8px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor */
+        font-size: 0.95rem; /* Font size */
+        font-weight: 600; /* Font weight */
+        transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transition for hover */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    }
+
+        .profile-header .back-button:hover {
+            background: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
+        }
+
+/* Profile Title in Header */
+.profile-title {
+    font-size: 1.8rem; /* Font size */
+    font-weight: 700; /* Bold font */
+    margin: 0; /* Remove default margin */
+}
+
+/* Edit Button styling */
+.edit-button {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically center items */
+    gap: 8px; /* Gap between icon and text */
+    background-color: white; /* White background */
+    color: var(--halkbank-blue); /* Halkbank blue text */
+    border: none; /* No border */
+    padding: 10px 16px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 0.95rem; /* Font size */
+    font-weight: 600; /* Font weight */
+    transition: all 0.2s ease; /* Smooth transition */
+}
+
+    .edit-button:hover {
+        background-color: #f8f9fa; /* Light gray on hover */
+        transform: translateY(-2px); /* Slight lift effect */
+    }
+
+    .edit-button.save-mode {
+        background-color: var(--success-green); /* Green background for save mode */
+        color: white; /* White text */
+    }
+
+        .edit-button.save-mode:hover {
+            background-color: #219a52; /* Darker green on hover */
+        }
+
+    .edit-button:disabled {
+        opacity: 0.7; /* Reduced opacity when disabled */
+        cursor: not-allowed; /* Not-allowed cursor */
+        transform: none; /* No lift effect when disabled */
+    }
+
+/* Content area for profile details */
+.profile-content {
+    max-width: 1000px; /* Max width */
+    margin: 0 auto; /* Center horizontally */
+    padding: 30px; /* Padding */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    gap: 30px; /* Gap between sections */
+}
+
+/* Main Profile Card (Avatar, Name, TCKN) */
+.profile-card {
+    background: white; /* White background */
+    border-radius: 16px; /* Rounded corners */
+    padding: 30px; /* Padding */
+    box-shadow: var(--card-shadow); /* Card shadow */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically center items */
+    gap: 25px; /* Gap between avatar and info */
+    border: 1px solid var(--border-color); /* Border */
+}
+
+.profile-avatar {
+    width: 80px; /* Width */
+    height: 80px; /* Height */
+    border-radius: 50%; /* Circular shape */
+    background: linear-gradient(135deg, var(--halkbank-blue), var(--halkbank-blue-light)); /* Gradient background */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    color: white; /* White text/icon color */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.profile-basic-info {
+    flex: 1; /* Take available space */
+}
+
+.profile-name {
+    font-size: 1.8rem; /* Font size */
+    font-weight: 700; /* Bold font */
+    color: var(--halkbank-blue); /* Halkbank blue text */
+    margin: 0 0 8px 0; /* Margin */
+}
+
+.profile-tckn {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically center items */
+    gap: 10px; /* Gap between items */
+    color: var(--text-secondary); /* Secondary text color */
+    font-size: 1rem; /* Font size */
+    margin: 0; /* Remove default margin */
+}
+
+.toggle-tckn-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: var(--halkbank-blue-light); /* Light Halkbank blue text */
+    cursor: pointer; /* Pointer cursor */
+    padding: 4px; /* Padding */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.2s ease; /* Smooth transition */
+}
+
+    .toggle-tckn-button:hover {
+        background-color: rgba(53, 122, 189, 0.1); /* Light blue background on hover */
+    }
+
+/* General Info Sections (e.g., Contact Info) */
+.info-section {
+    background: white; /* White background */
+    border-radius: 16px; /* Rounded corners */
+    padding: 30px; /* Padding */
+    box-shadow: var(--card-shadow); /* Card shadow */
+    border: 1px solid var(--border-color); /* Border */
+}
+
+.section-title {
+    font-size: 1.4rem; /* Font size */
+    font-weight: 700; /* Bold font */
+    color: var(--halkbank-blue); /* Halkbank blue text */
+    margin: 0 0 25px 0; /* Margin */
+    padding-bottom: 10px; /* Padding at bottom */
+    border-bottom: 2px solid #f0f0f0; /* Bottom border */
+}
+
+/* Info Grid for details within a section */
+.info-grid {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 25px; /* Gap between grid items */
+}
+
+.info-item {
+    display: flex; /* Flexbox layout */
+    align-items: flex-start; /* Align items to the start */
+    gap: 15px; /* Gap between icon and content */
+    padding: 20px; /* Padding */
+    background: #f8f9fa; /* Light gray background */
+    border-radius: 12px; /* Rounded corners */
+    border: 1px solid #e9ecef; /* Border */
+    transition: all 0.2s ease; /* Smooth transition */
+}
+
+    .info-item:hover {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+    }
+
+    .info-item.full-width {
+        grid-column: 1 / -1; /* Span full width in grid */
+    }
+
+.info-icon {
+    color: var(--halkbank-blue-light); /* Light Halkbank blue icon */
+    flex-shrink: 0; /* Prevent shrinking */
+    margin-top: 2px; /* Top margin */
+}
+
+.info-content {
+    flex: 1; /* Take available space */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    gap: 8px; /* Gap between items */
+}
+
+    .info-content label {
+        font-size: 0.9rem; /* Font size */
+        font-weight: 600; /* Font weight */
+        color: var(--text-secondary); /* Secondary text color */
+        text-transform: uppercase; /* Uppercase text */
+        letter-spacing: 0.5px; /* Letter spacing */
+    }
+
+    .info-content span {
+        font-size: 1.1rem; /* Font size */
+        font-weight: 500; /* Font weight */
+        color: var(--text-primary); /* Primary text color */
+        word-break: break-word; /* Break long words */
+    }
+
+/* Edit Inputs styling */
+.edit-input, .edit-textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding */
+    border: 2px solid #e9ecef; /* Border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    font-family: inherit; /* Inherit font family */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
+    background: white; /* White background */
+}
+
+    .edit-input:focus, .edit-textarea:focus {
+        outline: none; /* Remove default outline */
+        border-color: var(--halkbank-blue-light); /* Border color on focus */
+        box-shadow: 0 0 0 3px rgba(53, 122, 189, 0.1); /* Shadow on focus */
+    }
+
+.edit-textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px; /* Minimum height */
+}
+
+/* ACCOUNT INFO SECTION STYLES - FIXED CLASHES */
+
+/* Grid for Account Balance Card and IBAN Card */
+.account-info-grid {
+    display: grid; /* Grid layout */
+    /* Account Balance Card (2fr) will be wider than IBAN Card (1fr) */
+    grid-template-columns: 2fr 1fr; /* */
+    gap: 25px; /* Gap between the two cards */
+    align-items: stretch; /* Ensures cards stretch to equal height */
+}
+
+/* Account Balance Card - Specific fixes for clashing */
+.account-balance-card {
+    display: flex; /* Flexbox layout to align icon and details horizontally */
+    align-items: center; /* Vertically center icon and text details */
+    gap: 20px; /* Gap between icon and account details block */
+    padding: 25px; /* Padding inside the card */
+    background: linear-gradient(135deg, var(--halkbank-blue), var(--halkbank-blue-light)); /* Halkbank blue gradient */
+    color: white; /* White text color for all content inside */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 75, 141, 0.2); /* Shadow */
+    position: relative; /* For any potential absolute positioning of children */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+    .account-balance-card .account-icon {
+        color: #ffffff; /* White icon color */
+        min-width: 24px; /* Fixed minimum width for the icon */
+        min-height: 24px; /* Fixed minimum height for the icon */
+        flex-shrink: 0; /* Prevent the icon from shrinking */
+    }
+
+/* Account Details block (contains "Ana Hesap", balance, "Vadesiz") - Key fix for vertical spacing */
+.account-details {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Vertically center content within this block */
+    align-items: flex-start; /* Align content to the left */
+    flex: 1; /* Allow this block to take available horizontal space */
+}
+
+    .account-details h4 {
+        margin: 0; /* Reset default margins */
+        margin-bottom: 4px; /* Space between "Ana Hesap" and balance */
+        font-size: 1.1rem; /* Font size */
+        font-weight: 600; /* Font weight */
+        color: #ffffff; /* White text color */
+        white-space: nowrap; /* Prevent text from wrapping to next line */
+    }
+
+    .account-details .balance {
+        margin: 0; /* Reset default margins */
+        font-size: 1.8rem; /* Larger font size for balance */
+        font-weight: 700; /* Bold font weight */
+        color: #ffffff; /* White text color */
+        white-space: nowrap; /* Prevent text from wrapping to next line */
+    }
+
+    .account-details .account-type {
+        margin: 0; /* Reset default margins */
+        margin-top: 4px; /* Space between balance and "Vadesiz" */
+        font-size: 0.95rem; /* Font size */
+        opacity: 0.8; /* Slightly transparent */
+        color: #ffffff; /* White text color (can be rgba(255,255,255,0.8) for more transparency) */
+        white-space: nowrap; /* Prevent text from wrapping to next line */
+    }
+
+/* IBAN Card styling */
+.iban-card {
+    padding: 25px; /* Padding */
+    background: #f8f9fa; /* Light gray background */
+    border-radius: 12px; /* Rounded corners */
+    border: 1px solid var(--border-color); /* Border */
+    text-align: center; /* Center text */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Light shadow */
+}
+
+.iban-label {
+    font-size: 0.9rem; /* Font size */
+    font-weight: 600; /* Font weight */
+    color: var(--text-secondary); /* Secondary text color */
+    margin-bottom: 10px; /* Bottom margin */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.5px; /* Letter spacing */
+}
+
+.iban-number {
+    font-size: 1rem; /* Font size */
+    font-weight: 600; /* Font weight */
+    color: var(--text-primary); /* Primary text color */
+    font-family: 'Courier New', monospace; /* Monospace font for IBAN */
+    word-break: break-all; /* Break long words to prevent overflow */
+    line-height: 1.4; /* Line height */
+}
+
+/* Edit Actions (Buttons for Save/Cancel) */
+.edit-actions {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center buttons horizontally */
+    margin-top: 20px; /* Top margin */
+    gap: 15px; /* Gap between buttons */
+}
+
+.cancel-button {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically center items */
+    gap: 8px; /* Gap between icon and text */
+    background-color: var(--error-red); /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 12px 24px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1rem; /* Font size */
+    font-weight: 600; /* Font weight */
+    transition: background-color 0.2s ease; /* Smooth transition */
+}
+
+    .cancel-button:hover {
+        background-color: #c0392b; /* Darker red on hover */
+    }
+
+/* Loading & Error States styling */
+.loading-container, .error-container {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontally center items */
+    justify-content: center; /* Vertically center items */
+    min-height: 60vh; /* Minimum height */
+    gap: 20px; /* Gap between items */
+}
+
+.loading-spinner {
+    color: var(--halkbank-blue); /* Halkbank blue color */
+    animation: spin 1s linear infinite; /* Spin animation */
+}
+
+.error-message {
+    color: var(--error-red); /* Red text color */
+    font-size: 1.1rem; /* Font size */
+    text-align: center; /* Center text */
+    margin: 0; /* Remove default margin */
+}
+
+/* General Spin Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-header {
+        padding: 15px 20px; /* Adjust padding */
+        flex-wrap: wrap; /* Allow wrapping */
+        gap: 15px; /* Adjust gap */
+    }
+
+    .profile-title {
+        font-size: 1.5rem; /* Adjust font size */
+        order: 1; /* Order for mobile layout */
+        width: 100%; /* Full width */
+        text-align: center; /* Center text */
+    }
+
+    .profile-content {
+        padding: 20px; /* Adjust padding */
+        gap: 20px; /* Adjust gap */
+    }
+
+    .profile-card {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center text */
+        gap: 20px; /* Adjust gap */
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 20px; /* Adjust gap */
+    }
+
+    .account-info-grid {
+        grid-template-columns: 1fr; /* Single column for account info */
+        gap: 20px; /* Adjust gap */
+    }
+
+    .account-balance-card {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center text */
+        gap: 15px; /* Adjust gap */
+    }
+
+    .balance {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .edit-button, .back-button {
+        font-size: 0.9rem; /* Adjust font size */
+        padding: 8px 12px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .info-item {
+        padding: 15px; /* Adjust padding */
+    }
+
+    .profile-card {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .info-section {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .iban-number {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "halkbank-clone.client", "halkbank-clone.client\halkbank-clone.client.esproj", "{1166848A-EA3B-DBA3-202F-CE879471F7F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halkbank-clone.Server", "halkbank-clone.Server\halkbank-clone.Server.csproj", "{824869F1-C498-4251-BE12-82E031E6631A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1166848A-EA3B-DBA3-202F-CE879471F7F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1166848A-EA3B-DBA3-202F-CE879471F7F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1166848A-EA3B-DBA3-202F-CE879471F7F9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1166848A-EA3B-DBA3-202F-CE879471F7F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1166848A-EA3B-DBA3-202F-CE879471F7F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1166848A-EA3B-DBA3-202F-CE879471F7F9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{824869F1-C498-4251-BE12-82E031E6631A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824869F1-C498-4251-BE12-82E031E6631A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824869F1-C498-4251-BE12-82E031E6631A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824869F1-C498-4251-BE12-82E031E6631A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF2B3C64-ACF8-4769-A658-6815597314B6}
+	EndGlobalSection
+EndGlobal

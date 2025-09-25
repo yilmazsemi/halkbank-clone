@@ -1,0 +1,13 @@
+﻿{
+    "type": "service_account",
+    "project_id": "halkbank-clone-fac8b",
+    "private_key_id": "23a9289254f7ed114444416306d8ababac85a310",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCi6i5h04u4XQqR\noM8Hb1iE4k15cFhBXBbiYmyXROi7gVVJVBN7j5jVIeVA+MpoJIZZ7PDuqoiyRJDJ\nP3XSWrBQie8HBycqT45MVIS15y+Nd+Nl+pinhG+zI3GGUUWGYP0699bzUiDchb/E\nCDpEsZ0Kw7xU5JL0bjLWFS+1sFseKdiG1h/Y+4TO6/1RvC8OsSQ9ddOc1DXgBmf7\nx8jTIZr1Np0fnTDwdQ2vv3wO2rMFtmrq6K3q58eqIoIA2/V3jahI8mGSgu5bd/Lc\ndNHiQ0KO8nad/H4ywoGzNQHJP+h1377Z+pemeVU2M2HmZAxXJebBDBoXx6kgH6vW\nYFequMMLAgMBAAECggEAA/s4UI7pUzZ/rTkCb9DgyoT24u9D7BT8DWKqYYGYzm95\nGuZ0s266JW52oJsNfaem2nu+R5bgHSGTCD5sx38/39GYup5wiDAsu62bfXaKfij3\n5Be25oeHoBeCc4d47RfIGH2fp/XR2vgwMr8HILajR9tD6i8yO2PJPXVQsF5m9UDp\nwdwu2ZgKC7zBZKF1l5NuZzuRMUP2o5GTgTi1+Yq2SOawsgUHpRpuBnJU1FgphjJ5\nq1w1yjUkK72yF1h7dAj5HGr6FtDezORVKTVDUCwUaLaAA+EqD5je4GHlq5Mf0cX8\noa6QZXE4bGJsTUJu521PMeoxiJjWVZ/AzCNj5MldAQKBgQDS/OTOT1dKk5oeKInu\nOOoAGD3KpE7WFmOHNrBIFVG5s1YYCLcxXUDr4UefoWmonm3xjX2/1knGQ1m68rBy\nxY7gkzuWio5wJP1Z/+UJvLc2AEwlanplBnkfjbuio+4QIPyNEJ0f1NCNirm9q9D2\ny/Ipqndrc/u6fAHYWlWo3fPFGwKBgQDFq8Y9bvdGKNeSukJD/oiNFhId78TQY9DN\n6LvRtUM/j5hmitvCHHZhmj1IkDEwhA3uExRN+1dsatVmWG+aRNonQ4KaqiKm+mPD\nc9SfIEYClZns0yjqwvaCrm3rL62gTtgyWdx/G0+cUgVshv0QYyTetvdcGZJOBh3S\nm1clLmQI0QKBgF85yt8eyiwboESaUV6Wi26Ngl4SeI6BvlwJn9h43tDskx/31w7N\nov6TR+tRQ8nZ749FKAtMYTG9tiL9ZAv5BHpxmURhttYAq+RR7YLOjPYvfi6o9yLf\noA1Qv+4xBMJ80N+uLuxt9c7cXOaxRHgPJnYNvSZfS68oRwDqDJ1Rx7MfAoGBALAe\nDt93ebs58nAZoabhJprFuliP40RkWorLPGRo4sTD1N4wBAKbx2HIwadgSWNXlO20\ndBfSw56mRQIN80l45QGspbXVtlAdsTtYfW1VnOr6jY0yyjb4hBgE/4xXC5RUC045\nQDrDg5fcgFakot6x5wzD6fpWEkOQMYwOuYM4JQqxAoGAD+Jsell290gP7/3RWIbU\n0l8y+57/qJUfvSrcr0Vsqg9u0PcgT7KQSfexUdAhWlhHSt19dHI/U7XHetvNcXSe\ndkySLq9mtBuCGMnOn7fKidyx6W1PJ/QgBFxSBQ0T+M4pjSTpY57qLlXSJUzm0HAl\nNNlvkKVCz38zDB7cJDEkDyI=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-fbsvc@halkbank-clone-fac8b.iam.gserviceaccount.com",
+    "client_id": "105374552570772009312",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40halkbank-clone-fac8b.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+}
